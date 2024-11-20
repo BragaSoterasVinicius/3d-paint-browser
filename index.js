@@ -36,8 +36,9 @@ document.addEventListener('mousedown', function(event) {
         newDiv.style.borderColor = colorPicker.value;
         newDiv.style.borderStyle = 'solid';
         newDiv.style.position = 'absolute';
-        let canvas = document.getElementById("canvas");
-        canvas.appendChild(newDiv);
+        document.body.appendChild(newDiv);
+        //let canvas = document.getElementById("canvas");
+        //canvas.appendChild(newDiv);
     }
     
 });
@@ -78,8 +79,6 @@ function rabiscarModelo(x, y, xOut, yOut){
         yOut = yMoment;
     }
     let divAlterada = document.getElementById("myDivRabisco")
-    divAlterada.style.transformStyle = 'preserve-3d';
-    divAlterada.style.transform ='rotateY('+(Ydegrees)+'deg)';
     divAlterada.style.marginLeft = x;
     divAlterada.style.marginTop = y;
     divAlterada.style.width = xOut-x;
